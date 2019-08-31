@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cifrado cesar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One|Roboto" rel="stylesheet">
+    <script src="caesars_code.js"></script>
+</head>
+<body onload="start()">
+    <article>
+        <h1>Cifrado César</h1>
+        <p>
+            Cifrado César, también conocido como cifrado por desplazamiento, es una de las técnicas de codificación más
+            simples
+            y más usadas.
+            Es un tipo de cifrado por sustitución en el que una letra en el texto original es reemplazada por otra letra
+            que
+            se
+            encuentra tres posiciones más adelante
+            en el alfabeto. <a href="https://es.wikipedia.org/wiki/Cifrado_César">Leer mas</a>
+        </p>
+    </article>
+    <div class="card_encryption">
+        <form>
+            <h2>Cifrar / Decifrar</h2>
+            <label for="textarea">Texto Original</label>
+            <br>
+            <br>
+            <textarea id="txt_original" cols="30" rows="5"></textarea>
+            <br>
+            <br>
+            <label for="textarea">Texto Cifrado</label>
+            <br>
+            <br>
+            <textarea id="txt_cifrado" cols="30" rows="5"></textarea>
+            <br>
+            <br>
+            <label for="select">Desplazamiento</label>
+            <select class="select" id="select_desp" required>
+
+            </select>
+            <br>
+            <br>
+            <label class="container">
+                Desplazamiento aleatorio
+                <input type="checkbox" id="chkb_aleatorio" onchange="OnCheckedChange_chkbAleatorio()">
+                <span class="checkmark"></span>
+            </label>
+
+            <br>
+            <br>
+            <br>
+            <input type="button" value="Cifrar" onclick="OnClick_btnCifrar()">
+            <input type="button" value="Decifrar" onclick="OnClick_btnDecifrar()">
+            <br>
+            <br>
+            <br>
+            <br>
+        </form>
+    </div>
+</body>
+</html>
